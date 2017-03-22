@@ -1,0 +1,59 @@
+body {
+	background-color: #663300;
+}
+
+h1, h2, h3 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: #F3D05C;
+	text-decoration: none;
+}
+
+#bieren a {
+	color: white;
+}
+
+#zeven_trapisten {
+	float: right;
+	border: 1px solid white;
+	margin-top: -50px;
+	margin-right: 25px;
+	background-color: #663300;
+}
+
+#bieren li {
+	display: inline;
+	border-radius: 25px;
+	background-color: #662222;
+	border: 2px grey inset;
+	padding: 10px 30px 10px 30px;
+	margin: 15px;
+}
+
+#bieren li:hover {
+	border: 2px outset grey;
+}
+
+p {
+	color: white;
+}
+
+section {
+	background-color: #660000;
+	border: 1px solid white;
+	margin: 10px;
+	padding-left: 15px;
+	border-radius: 0 0 15px 0;
+}
+
+article {
+	background-color: #662222;
+	border: 1px solid white;
+	margin: 10px;
+	padding-left: 15px;
+	border-radius: 0 0 15px 0;
+}
+

@@ -1,0 +1,19 @@
+p {
+	color: navy;
+	font-size: 16pt;
+}
+
+#par1 {
+	font-family: Arial, sans-serif;
+	font-size: 0.75em; /* 12pt/16pt */
+}
+
+#par2 {
+	font-family: Times, serif;
+	font-size: 0.875em; /* 14pt/16pt=0.875em */
+}
+
+#par3 {
+	font-family: Courier, monospace;
+	font-size: 1em;
+}
