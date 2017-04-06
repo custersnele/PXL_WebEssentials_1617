@@ -1,0 +1,18 @@
+label, input {
+	float: left;
+}
+
+label {
+	width: 15em;
+	clear: left;
+	margin-bottom: 10px;
+}
+
+label::after {
+	content: ":";
+}
+
+input[type=reset] {
+	clear: left;
+	margin-right: 18.3em;
+}

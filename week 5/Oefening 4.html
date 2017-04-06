@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulieren: nieuwe elementen</title>
+		<link href="Oefening 4.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>Gelieve dit formulier in te vullen</h1>
+		<form>
+			<label for="naam">Naam</label>
+			<input id="naam" name="naam" type="text"/>
+			<label for="voornaam">Voornaam</label>
+			<input id="voornaam" name="voornaam" type="text"/>
+			<label for="email">E-mail</label>
+			<input id="email" name="email" type="email" placeholder="voornaam.naam@isp.be"/>
+			<label for="website">Website</label>
+			<input id="website" name="website" type="url" placeholder="http://www.site.be"/>
+			<label for="postnummer">Postnummer</label>
+			<input id="postnummer" name="postnummer" type="number" min="1000" max="9999"/>
+			<label for="score">Score</label>
+			<input id="score" name="score" type="range" min="1" max="10"/>
+			<label for="zoektekst">Zoeken</label>
+			<input id="zoektekst" name="q" type="search"/>
+			<label for="datum">Datum</label>
+			<input id="datum" name="datum" type="date"/>
+			<label for="provincie">Provincie</label>
+			<input id="provincie" name="provincie" type="text" list="provincies"/>
+			<datalist id="provincies">
+				<option value="Limburg">Limburg</option>
+				<option value="Antwerpen">Antwerpen</option>
+				<option value="Vlaams-Brabant">Vlaams-Brabant</option>
+				<option value="Oost-Vlaanderen">Oost-Vlaanderen</option>
+				<option value="West-Vlaanderen">West-Vlaanderen</option>
+				<option value="Waals-Brabant">Brabant wallon</option>
+				<option value="Luik">Liège</option>
+				<option value="Namen">Namur</option>
+				<option value="Henegouwen">Hainaut</option>
+				<option value="Luxemburg">Luxembourg</option>
+			</datalist>
+			<label for="kleur">Kleur</label>
+			<input id="kleur" name="kleur" type="color"/>
+			<input type="reset" value="Alles wissen"/>
+			<input type="submit" value="Verzenden"/>
+		</form>
+	</body>
+</html>
