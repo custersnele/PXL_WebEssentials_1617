@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Dom-scripting: Rollover</title>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            font: bold 16pt Arial;
+        }
+
+        #info {
+            text-align: center;
+        }
+
+        img {
+            padding-top: 25px;
+            width: 250px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<h1>Sandy Bridge microarchitectuur</h1>
+<p>Beweeg over de logo's om de processor te zien</p>
+<div id="info">
+    <label for="processor">Gekozen processor:</label>
+    <output id="processor"></output>
+    <div>
+        <img src="images/core_i3_logo.gif" alt="Core i3" id="processor3"/>
+        <img src="images/core_i5_logo.gif" alt="Core i5" id="processor5"/>
+        <img src="images/core_i7_logo.gif" alt="Core i7" id="processor7"/>
+    </div>
+</div>
+    <script>
+			"use strict";
+			window.addEventListener("load", init);
+			
+			var originalImage;
+			
+			function init() {
+				var images = document.getElementsByTagName("img");
+				for (let i = 0; i < images.length; i++) {
+					images[i].addEventListener("mouseover", displayProcessor);
+					images[i].addEventListener("mouseout", displayOriginal);
+				}
+			}
+			function displayProcessor() {
+				originalImage = this.src;
+				document.getElementById("processor").textContent = this.alt;
+				switch (this.id) {
+					case "processor3":
+						this.src = 'images/core_i3.jpg';
+						break;
+					case "processor5":
+						this.src = 'images/core_i5.jpg';
+						break;
+					case "processor7":
+						this.src = 'images/core_i7.jpg';
+						break;
+				}
+			}
+			
+			function displayOriginal() {
+				this.src = originalImage;
+				document.getElementById("processor").textContent = "";
+			}
+    </script>
+</body>
+</html>

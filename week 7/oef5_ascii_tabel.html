@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>ASCII tabel</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        th {
+            color: white;
+            background-color: black;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+<table id="ascii_table">
+</table>
+    <script>
+			"use strict";
+			window.addEventListener("load", function() {
+				const colgroups = 4;
+				const rows = 64;
+				const start = 0; // 0x1f400;
+				var generated = "";
+				generated += "<thead><tr>\n";
+				for (let i = 0; i < colgroups; i++) {
+					generated += "<th>Dec</th><th>Hex</th><th>Char</th>\n";
+				}
+				generated += "</tr></thead>\n";
+				
+				generated += "<tbody>\n";
+				for (let i = 0; i < rows; i++) {
+					generated += "<tr>";
+					for(let j = 0; j < colgroups; j++) {
+						var dec = start + j * rows + i;
+						generated += "<td>"+ dec +"</td><td>" + dec.toString(16) +"</td><td>" + String.fromCodePoint(dec) +"</td>\n";
+						// generated += `<td>${dec}</td><td>${dec.toString(16)}</td><td>${String.fromCodePoint(dec)}</td>\n`;
+					}
+					generated += "</tr>\n";
+				}
+				generated += "</tbody>\n";
+				document.getElementById("ascii_table").innerHTML = generated;
+			});
+    </script>
+</body>
+</html>

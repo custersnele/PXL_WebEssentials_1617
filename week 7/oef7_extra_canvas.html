@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tekenen op canvas</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="400" height="400"
+        style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+
+<script>
+    "use strict";
+    var drawStreet = function (ctx) {
+        var drawTriangle = function(x, y, size) {
+            ctx.moveTo(x, y);
+            ctx.lineTo(x + size, y);
+            ctx.lineTo(x, y - size);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+        };
+
+        var drawHouse = function (x, y, hoogte) {
+            drawTriangle(x, y, hoogte);
+            ctx.rect(x, y, hoogte, hoogte);
+            ctx.stroke();
+        };
+
+        var breedte = 20;
+        var marge = 10;
+        var x = 10;
+        var y = 200;
+        for (let i = 0; i < 4; i++) {
+            drawHouse(x, y, breedte);
+            x = x + breedte + marge;
+            breedte = breedte * 2;
+        }
+    };
+
+    window.addEventListener("load", function () {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        drawStreet(ctx);
+    });
+
+</script>
+</body>
+</html>
