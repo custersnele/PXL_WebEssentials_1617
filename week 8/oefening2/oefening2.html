@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Cursor</title>
+<body>
+<span id="crosshair">crosshair</span>
+<span id="pointer">pointer</span>
+<span id="move">move</span>
+<span id="n-resize">n-resize</span>
+<span id="ne-resize">ne-resize</span>
+<span id="e-resize">e-resize</span>
+<span id="se-resize">se-resize</span>
+<span id="s-resize">s-resize</span>
+<span id="sw-resize">sw-resize</span>
+<span id="w-resize">w-resize</span>
+<span id="nw-resize">nw-resize</span>
+<span id="text">text</span>
+<span id="wait">wait</span>
+<span id="help">help</span>
+<span id="zoom-in">zoom-in</span>
+<span id="zoom-out">zoom-out</span>
+<span id="not-allowed">not-allowed</span>
+<script>
+    var cursors = document.getElementsByTagName("span");
+    for (let i = 0; i < cursors.length; i++) {
+        cursors[i].addEventListener("mouseover", changeCursor);
+    }
+
+    function changeCursor() {
+        this.style.cursor = this.id;
+    }
+</script>
+</body>
+</html>
