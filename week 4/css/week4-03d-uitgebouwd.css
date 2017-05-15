@@ -1,0 +1,110 @@
+body {
+	background-color: black;
+	margin: 0;
+}
+
+a {
+	color: black;
+	display: block;
+	height: 100%;
+	background-color: grey;
+	border: 5px outset white;
+	border-radius: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+li {
+	float: left;
+	display: block;
+}
+
+:not(:target) > a:hover {
+	position: relative;
+	
+	left: 2px;
+	top: 2px;
+	border-style: inset;
+}
+
+li:nth-of-type(4n + 1) {
+	/* Debug: toon de geselecteerden met */
+	/* background-color: red; */
+	clear: left;
+}
+
+li:nth-of-type(8n+1) > a, li:nth-of-type(8n+3) > a, li:nth-of-type(8n+6) > a, li:nth-of-type(8n) > a {
+	background-color: darkgray;
+}
+
+li:target {
+	transform-style: preserve-3d;
+	position: relative;
+	perspective: 400px;
+}
+
+li:target > a {
+	/* transform: rotate(3deg); */
+	box-shadow: 0 0 10px 0 lightblue;
+	cursor: default;
+}
+
+@keyframes turnAround {
+	from {
+		transform: rotateX(0deg);
+	}
+	12.5% {
+		transform: translateZ(-50px) rotateX(10deg);
+	}
+	50% {
+		transform: translateZ(-120px) rotateX(180deg);
+		animation-timing-function: linear;
+	}
+	87.5% {
+		transform: translateZ(-50px) rotateX(350deg);
+	}
+	to {
+		transform: rotateX(360deg);
+	}
+}
+
+li:target > a {
+	animation-duration: 1s;
+	animation-name: turnAround;
+	animation-iteration-count: 1;
+	animation-delay: 2s;
+	animation-timing-function: ease-in;
+	animation-direction: normal;
+}
+
+@media screen and (min-width: 320px) {
+	li {
+		width: 70px;
+		height: 70px;
+		line-height: 58px;
+		margin: 3px;
+		font-size: 80%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	li {
+		width: 110px;
+		height: 110px;
+		line-height: 95px;
+		margin: 5px;
+		font-size: 100%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	li {
+		width: 140px;
+		height: 140px;
+		line-height: 124px;
+		margin: 10px;
+	}
+}

@@ -1,0 +1,42 @@
+body {
+	background-color: black;
+	margin: 0;
+	overflow: hidden;
+}
+
+nav {
+	margin: 0 auto;
+	max-width: 70vh;
+}
+
+ul {
+	margin: 0;
+	padding-left: 0;
+}
+
+li {
+	margin: 1vmin;
+	display: inline-block;
+	/* Alternatief: */
+	/*
+	float: left;
+	display: block;
+	*/
+}
+
+a {
+	box-sizing: border-box;
+	width: 23vw;
+	height: 14.5vh;
+	/* Voor vierkantige vorm */
+	max-width: 15vh;
+	max-height: 23vw;
+	
+	text-align: center;
+	display: block;
+	color: black;
+	text-decoration: none;
+	background-color: grey;
+	border-radius: 9px 16px;
+	border: 7px ridge lightgray;
+}

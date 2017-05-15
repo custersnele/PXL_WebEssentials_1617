@@ -1,0 +1,49 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: black;
+	margin: 0;
+	overflow: hidden;
+}
+
+nav {
+	margin: 0 auto;
+	height: 100%;
+	max-width: 800px;
+	width: 100%;
+}
+
+ul {
+	height: 100%;
+	margin: 0;
+	padding-left: 0;
+}
+
+li {
+	margin: 4px;
+	display: block;
+	height: 15%;
+	/* Beter: */
+	/* height: calc(100%/6 - 8px); */
+	
+	width: 22%;
+	min-width: 10ex;
+	float: left;
+}
+
+a {
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	
+	text-align: center;
+	display: block;
+	color: black;
+	text-decoration: none;
+	background-color: grey;
+	border-radius: 9px 16px;
+	border: 7px ridge lightgray;
+}
