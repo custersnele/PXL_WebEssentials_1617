@@ -1,0 +1,104 @@
+body {
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+	background-color: hsl(0, 0%, 90%);
+	margin: 0;
+}
+
+#alles {
+	margin: 50px auto;
+	width: 770px;
+	border: solid 5px hsl(0, 0%, 62%);
+	border-radius: 12px;
+	box-shadow: 0 0 60px 15px hsl(0, 0%, 40%);
+	overflow: hidden;
+}
+
+nav, main, footer {
+	border-width: 0 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+header {
+	height: 78px;
+	background: url("../figuren/achtergrond.jpg") no-repeat center #000;
+	background-size: cover;
+	color: hsl(0, 0%, 95%);
+	text-align: center;
+	padding-top: 1em;
+}
+
+header h1, header h2 {
+	margin: 0;
+}
+
+header h1 {
+	font-size: 2em;
+}
+
+nav {
+	background-color: hsl(0, 0%, 50%);
+	border-width: 1px;
+}
+
+nav ul {
+	margin: 0;
+	padding-left: 0;
+	text-align: center;
+}
+
+nav li {
+	display: inline;
+}
+
+nav li a {
+	text-decoration: none;
+	font: 12pt/22.5pt Verdana, Geneva, sans-serif;
+	padding: 5px 20px 6px 20px;
+	color: hsl(0, 0%, 10%);
+}
+
+nav li a:hover {
+	color: hsl(0, 0%, 90%);
+	background-color: hsl(0, 0%, 30%);
+}
+
+main {
+	height: 420px;
+	background-color: white;
+	border-width: 0 1px;
+	/* prevent margin collapsing */
+	overflow: auto;
+	padding-right: 30px;
+}
+
+main h1 {
+	font-size: 1.5em;
+}
+
+main > h1:first-of-type {
+	margin-top: 10px;
+}
+
+aside {
+	float: left;
+	margin: 10px;
+	border: 1px black solid;
+	background: hsl(0, 0%, 80%);
+	height: 200px;
+	width: 120px;
+}
+
+footer {
+	height: 20px;
+	background: hsl(0, 0%, 80%);
+	font-size: 9px;
+	text-align: center;
+	border-radius: 0 0 7px 7px;
+	border-width: 0 1px 1px 1px;
+}
+
+footer p {
+	margin: 0;
+	padding-top: 3px;
+}

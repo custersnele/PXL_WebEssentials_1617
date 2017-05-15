@@ -1,0 +1,45 @@
+body {
+	background-color: hsl(140, 20%, 85%);
+}
+
+#alles {
+	border-color: hsl(140, 20%, 60%);
+	
+	/* Opgelet, overschrijft de lengtes */
+	/* Reden: box-shadow-color bestaat niet */
+	box-shadow: 0 0 60px 15px hsl(140, 20%, 40%);
+}
+
+nav, main, footer {
+	border-color: hsl(140, 15%, 20%);
+}
+
+header {
+	color: hsl(140, 15%, 95%);
+}
+
+nav {
+	background-color: hsl(140, 15%, 50%);
+}
+
+nav li a {
+	color: hsl(140, 20%, 10%);
+}
+
+nav li a:hover {
+	color: hsl(140, 20%, 90%);
+	background-color: hsl(140, 20%, 30%);
+}
+
+main {
+	background-color: white;
+}
+
+aside {
+	border-color: black;
+	background-color: hsl(140, 10%, 70%);
+}
+
+footer {
+	background-color: hsl(140, 10%, 70%);
+}
