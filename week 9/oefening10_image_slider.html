@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image slider</title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            const pics = ["numbers_1.png", "numbers_2.png", "numbers_3.png", "numbers_4.png", "numbers_5.png", "numbers_6.png", "numbers_7.png"];
+            let currentPic = 0;
+
+            $("#buttonNext").click(function () {
+                $("#slider").fadeOut(2000, function () {
+                    ++currentPic;
+                    if (currentPic >= pics.length) {
+                        currentPic = 0;
+                    }
+                    $("#slider").attr("src", "images/" + pics[currentPic]);
+                    $("#slider").fadeIn(2000);
+                });
+            });
+            $("#buttonPrev").click(function () {
+                $("#slider").fadeOut(2000, function () {
+                    --currentPic;
+                    if (currentPic < 0) {
+                        currentPic = pics.length - 1;
+                    }
+                    $("#slider").attr("src", "images/" + pics[currentPic]);
+                    $("#slider").fadeIn(2000);
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div><img src="images/numbers_1.png" id="slider"/></div>
+<input type="button" id="buttonPrev" value="Vorige"/>
+<input type="button" id="buttonNext" value="Volgende"/>
+</body>
+</html>
